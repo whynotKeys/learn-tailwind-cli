@@ -19,6 +19,32 @@
   /* spacing 정의 예시 */
   /* --spacing-4\.5: calc(var(--spacing) * 2); */
 
-  --color-tailwind-blue: #22b4b9;
-  --color-tailwind-skyblue: #dbfeff;
+  /* example-01 */
+  /* --color-tailwind-blue: #22b4b9;
+  --color-tailwind-skyblue: #dbfeff; */
+
+  /* 사용자변수처럼 지정해서 html에서 ()안에 넣고 불러서 쓸 수 있음-> 4버전부터 가능하게 됨 */
+  --lion: repeat(auto-fit, minmax(200px, 1fr));
 }
+
+/* 요렇게 주는 게 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 와 동일한 결과 */
+/* .list{
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media(min-width: 640px){    
+  grid-template-columns: repeat(2,1fr) ;
+  }
+  @media(min-width: 768px){    
+  grid-template-columns: repeat(3,1fr) ;
+  }
+  @media(min-width: 1024px){    
+  grid-template-columns: repeat(4,1fr) ;
+  }
+} *
+
+/* 상기 내용과 같은 효과 // grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] 와 같은 결과 */
+/* .list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+} */
