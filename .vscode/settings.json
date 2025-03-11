@@ -5,7 +5,8 @@
     "**/.hg": true,
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
-    "**/node_modules": true
+    "**/node_modules": true,
+    "**/output.css": true
   },
   "files.associations": {
     "*.css": "tailwindcss"
@@ -15,5 +16,8 @@
   },
   "tailwindCSS.includeLanguages": {
     "plaintext": "html"
+  },
+  "files.watcherExclude": {
+    "**/output.css": true
   }
 }
