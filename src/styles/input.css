@@ -61,3 +61,10 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 } */
+.notice {
+  @apply flex bg-blue-950 border-2 border-green-600;
+
+  .notice-header {
+    @apply p-4 text-white w-[200px] relative;
+  }
+}
