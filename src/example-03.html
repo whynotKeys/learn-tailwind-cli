@@ -3,14 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>- Tailwind CSS</title>
+    <title>Notice - Tailwind CSS</title>
     <link rel="icon" href="/assets/favicon.svg" />
     <link
       rel="preload"
       as="font"
-      href="/assets/font/woff2/PretendardVariable.woff2"
+      href="/assets/font/pretendard/woff2/PretendardVariable.woff2"
     />
     <link rel="stylesheet" href="/styles/output.css" />
   </head>
-  <body></body>
+  <body>
+    <section class="flex w-auto h-28">
+      <div
+        class="bg-gradient-to-r from-ediya-blue-100 to-ediya-blue-200 w-28 aspect-square text-white grid grid-cols-1"
+      >
+        <h1 class="block text-center mt-4">NOTICE</h1>
+        <div class="justify-self-end">
+          <button
+            class="w-5 h-5 border border-solid border-white"
+            type="button"
+          >
+            &lsaquo;
+          </button>
+          <button
+            class="w-5 h-5 border border-solid border-white"
+            type="button"
+          >
+            &rsaquo;
+          </button>
+        </div>
+      </div>
+      <div class="p-4 border border-solid border-gray-500 min-w-0">
+        <h2 class="block text-ediya-blue-100 font-bold">
+          이디야멤버스가 새로워집니다.
+        </h2>
+        <time class="text-gray-500 text-sm mb-5" datetime="2025-03-11"
+          >2025.03.11</time
+        >
+        <p class="truncate">
+          이디야멤버스에 새로운 기능이 추가됩니다. 추가되는 고객등급제,
+          이디야카드, 스마트어쩌구 뒷내용은 안 보이기 때문에 아무렇게나 씁니다.
+        </p>
+      </div>
+    </section>
+  </body>
 </html>

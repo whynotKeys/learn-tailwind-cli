@@ -1,5 +1,8 @@
 @import "tailwindcss";
-/* 이 패키지가 리셋도 알아서 시켜줌! */
+@import "./../assets/font/pretendard/pretendardvariable.css";
+@import "./../assets/font/notoserif/notoserif.css";
+@import "./../assets/font/suit/SUIT-Variable.css";
+/* 테일윈드가 리셋도 알아서 시켜줌! */
 
 @theme {
   /* Tailwind 일부 설정 재정의 */
@@ -25,6 +28,16 @@
 
   /* 사용자변수처럼 지정해서 html에서 ()안에 넣고 불러서 쓸 수 있음-> 4버전부터 가능하게 됨 */
   --lion: repeat(auto-fit, minmax(200px, 1fr));
+
+  /* 기본 font-family 설정("Pretendard Variable") */
+  --font-*: initial;
+  --font-sans: "Pretendard Variable", sans-serif;
+  --font-serif: "Noto Serif KR", serif;
+  --font-suit: "SUIT Variable", sans-serif;
+
+  /* Ediya */
+  --color-ediya-blue-100: #263d83;
+  --color-ediya-blue-200: rgb(16, 36, 87);
 }
 
 /* 요렇게 주는 게 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 와 동일한 결과 */
