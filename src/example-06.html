@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>- Tailwind CSS</title>
+    <link rel="icon" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href="/styles/output.css" />
+  </head>
+  <body>
+    <!-- 내 코드 -->
+    <section
+      class="grid grid-rows-3 p-4 text-white bg-gradient-to-r from-ediya-blue-300 to-ediya-blue-200"
+    >
+      <div class="newshead flex flex-row place-content-between mb-3">
+        <h1 class="text-2xl font-bold hover:text-yellow-300">NEWS</h1>
+        <button
+          type="button"
+          class="w-4 h-4 border border-white flex items-center justify-center"
+          aria-label="뉴스 더보기"
+        >
+          <svg
+            class="rotate-45"
+            width="8"
+            height="8"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M14.4728 0.149294C14.6637 -0.0502529 14.9732 -0.0502529 15.1641 0.149294C15.355 0.348841 15.355 0.67237 15.1641 0.871917L8.69123 7.63862L15.8553 15.128C16.0462 15.3275 16.0462 15.6511 15.8553 15.8506C15.6645 16.0501 15.355 16.0501 15.1641 15.8506L7.99999 8.36124L0.835868 15.8506C0.644987 16.0501 0.335507 16.0501 0.144626 15.8506C-0.0462555 15.6511 -0.0462554 15.3275 0.144626 15.128L7.30874 7.63862L0.835901 0.871917C0.64502 0.67237 0.64502 0.348841 0.835901 0.149294C1.02678 -0.0502529 1.33626 -0.0502529 1.52714 0.149294L7.99998 6.91599L14.4728 0.149294Z"
+              fill="#F5F5F5"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="link">
+        <a href="#"
+          >[JMT] 이디야 커피, 저렴이인 줄 알았는데 먹다보면 싸지도 않아</a
+        >
+        <time datetime="2020-09-08">2020-09-08</time>
+      </div>
+      <div class="link">
+        <a href="#">[알프스 소식] 클라라曰 하이디야 이디야 본사가 어디야?</a>
+        <time datetime="2020-08-27">2020-08-27</time>
+      </div>
+    </section>
+
+    <!-- 강사님 코드 -->
+    <section
+      class="bg-(image:--ediya-blue) text-white grid grid-cols-[1fr_100px] p-4 gap-2"
+    >
+      <h2 class="font-bold text-xl h-10">NEWS</h2>
+      <ul class="contents min-w-0">
+        <li class="grid grid-cols-subgrid grid-rows-subgrid col-span-2">
+          <a class="truncate" href="/"
+            >[MTN] 이디야커피, 조각 케이크 2종 출시 디저트 강화 이디야커피, 조각
+            케이크 2종 출시 디저트 강화</a
+          >
+          <time class="text-right" datetime="2025-03-14T11:54:25"
+            >2025.03.14</time
+          >
+        </li>
+        <li class="grid grid-cols-subgrid grid-rows-subgrid col-span-2">
+          <a class="truncate" href="#"
+            >[아시아경제] 이디야커피, '비니스트 커피믹스 출시' [아시아경제]
+            이디야커피, '비니스트 커피믹스 출시'</a
+          >
+          <time class="text-right" datetime="2025-03-14T13:17:54"
+            >2025.03.14</time
+          >
+        </li>
+      </ul>
+      <a href="/" class="col-start-2 row-start-1 justify-self-end">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <title>이디야 뉴스 더보기</title>
+          <rect x="0.5" y="0.5" width="15" height="15" stroke="#F5F5F5" />
+          <path d="M5 8.02114H11M8.05331 5L8.05331 11" stroke="#F5F5F5" />
+        </svg>
+      </a>
+    </section>
+  </body>
+</html>

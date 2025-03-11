@@ -35,10 +35,6 @@
   --font-serif: "Noto Serif KR", serif;
   --font-suit: "SUIT Variable", sans-serif;
 
-  /* Ediya */
-  --color-ediya-blue-100: #263d83;
-  --color-ediya-blue-200: rgb(16, 36, 87);
-
   /* Animation */
   --animate-wobble: wobble 1s ease-in-out infinite;
 
@@ -64,6 +60,19 @@
       transform: translateX(-5px) rotate(-1deg);
     }
   }
+
+  /* Ediya */
+  /* 강사님 작성 부분 가져옴 */
+  --color-ediya-blue-100: #a7d1e7;
+  --color-ediya-blue-200: #2c68ae;
+  --color-ediya-blue-300: #24388d;
+
+  /* 원형 그라디언트 변수 */
+  --ediya-blue: linear-gradient(
+    -45deg,
+    var(--color-ediya-blue-200),
+    var(--color-ediya-blue-300)
+  );
 }
 
 /* 요렇게 주는 게 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 와 동일한 결과 */
@@ -95,5 +104,16 @@
     > div {
       @apply p-4 text-white w-[200px] relative;
     }
+  }
+
+  .link {
+    @apply flex flex-row place-content-between;
+
+    > a {
+      @apply truncate hover:underline;
+    }
+    /* > time {
+      @apply text-nowrap;
+    } */
   }
 }
