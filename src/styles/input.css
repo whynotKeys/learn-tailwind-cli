@@ -73,6 +73,22 @@
     var(--color-ediya-blue-200),
     var(--color-ediya-blue-300)
   );
+
+  /* icon-color */
+  --color-sun-yellow: #f3d31e;
+  --color-moon-yellow: #fcf264;
+
+  /* Emphasize Animation */
+  --animate-emphasize: emphasize 1s ease-in-out forwards;
+
+  @keyframes emphasize {
+    0% {
+      transform: scale(0.8) rotate(0turn);
+    }
+    100% {
+      transform: scale(1.2) rotate(1turn);
+    }
+  }
 }
 
 /* 요렇게 주는 게 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 와 동일한 결과 */

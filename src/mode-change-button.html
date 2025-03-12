@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>- Tailwind CSS</title>
+    <link rel="icon" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href="/styles/output.css" />
+  </head>
+  <body class="bg-blue-200">
+    <section class="w-full flex flex-col mx-auto items-center">
+      <!-- 다크 모드 전환 버튼 -->
+      <button
+        id="darkModeToggle"
+        class="dark-light-toggle flex justify-center items-center w-12 h-12 m-3 p-1 bg-white rounded-md dark:bg-gray-300"
+      >
+        <svg
+          class="w-8 h-8 m-auto fill-amber-50 hover:animate-emphasize hover:fill-moon-yellow"
+          viewBox="0 0 32 32"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M30.9,20.8c-2.2,6.1-8,10.2-14.5,10.2C7.9,31,1,24.2,1,15.8C1,8.7,5.9,2.6,12.9,1c0.3-0.1,0.7,0,1,0.3     c0.2,0.3,0.3,0.7,0.2,1c-0.5,1.4-0.8,2.9-0.8,4.4c0,7.3,6,13.2,13.4,13.2c1,0,2.1-0.1,3.1-0.4c0.3-0.1,0.7,0,1,0.3     C31,20.1,31.1,20.5,30.9,20.8z"
+          />
+        </svg>
+
+        <svg
+          class="w-8 h-8 m-auto hover:animate-emphasize hover:fill-sun-yellow dark:invisible"
+          viewBox="0 0 272 272"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <ellipse cx="136" cy="136.89" rx="78.81" ry="79.36" />
+          <polygon points="136 8 118.89 37.84 153.11 37.84 136 8" />
+          <polygon points="264 136.88 234.37 154.11 234.37 119.66 264 136.88" />
+          <polygon points="8 136.88 37.63 154.11 37.63 119.66 8 136.88" />
+          <polygon points="45.49 45.75 54.34 79.03 78.54 54.67 45.49 45.75" />
+          <polygon
+            points="226.51 45.75 193.46 54.67 217.66 79.03 226.51 45.75"
+          />
+          <polygon points="136 264 118.89 234.16 153.11 234.16 136 264" />
+          <polygon
+            points="45.49 226.25 54.34 192.97 78.54 217.33 45.49 226.25"
+          />
+          <polygon
+            points="226.51 226.25 193.46 217.33 217.66 192.97 226.51 226.25"
+          />
+        </svg>
+      </button>
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const savedTheme = localStorage.getItem("color-theme") || "light";
+        console.log(savedTheme);
+        if (savedTheme === "dark") {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      });
+
+      // 다크 모드 토글 버튼
+      const toggleButton = document.querySelector(".dark-light-toggle");
+
+      if (toggleButton) {
+        toggleButton.addEventListener("click", function () {
+          const isDarkMode =
+            document.documentElement.classList.contains("dark");
+
+          if (isDarkMode) {
+            document.documentElement.classList.remove("dark");
+            localStorage.setItem("color-theme", "light");
+          } else {
+            document.documentElement.classList.add("dark");
+            localStorage.setItem("color-theme", "dark");
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
